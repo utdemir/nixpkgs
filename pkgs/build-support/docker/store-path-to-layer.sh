@@ -1,6 +1,7 @@
 #!@shell@
 
 set -eu
+set -o pipefail
 
 layerNumber=$1
 shift
