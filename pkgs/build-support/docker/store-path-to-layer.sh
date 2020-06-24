@@ -35,7 +35,7 @@ mkdir -p __Nix__/store
 # store path to the absolute store path.
 tarhash=$(
   basename -a "$@" |
-    tar --create --preserve-permissions --absolute-names nix \
+    tar --create --preserve-permissions --absolute-names __Nix__ \
       --directory /nix/store --verbatim-files-from --files-from - \
       --hard-dereference --sort=name \
       --mtime="@$SOURCE_DATE_EPOCH" \
